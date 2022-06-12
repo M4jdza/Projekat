@@ -5,6 +5,7 @@ import Tabela from "./Tabela";
 import data from './mock-data.json';
 import { nanoid } from 'nanoid';
 import React, { useState } from 'react';
+import { useLocation } from "react-router-dom";
 
 
 const Home = () => {
@@ -41,11 +42,13 @@ const Home = () => {
 
         const newContacts = [...contacts, newContact];
         setContacts(newContacts);
-
     }
+
+    const location = useLocation();
 
     return (
         <>
+            <h1 style={{textAlign: 'center', border: '1px solid black'}}> {location.state.naslov} </h1>
             <Forma handleAddFormChange={handleAddFormChange} handleEventSubmit={handleEventSubmit} />
             <Tabela contacts={contacts} setContacts={setContacts} />
         </>

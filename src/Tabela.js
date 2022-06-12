@@ -30,7 +30,7 @@ const Tabela = ({ contacts, setContacts }) => {
                                 {contacts.map((contact, index) => (
                                     <Draggable draggableId={contact.id} index={index} key={contact.id}>
                                         {(provided) => (
-                                            <tr  {...provided.draggableProps} ref={provided.innerRef} onDoubleClick={() => {
+                                            <tr  {...provided.draggableProps} ref={provided.innerRef} onClick={() => {
                                                 setContacts(contacts.filter(con => con !== contact))
                                             }}>
                                                 <td {...provided.dragHandleProps}> = </td>

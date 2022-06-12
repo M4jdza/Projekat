@@ -6,6 +6,7 @@ const Navbar = () => {
             <h1>Projekat</h1>
             <div className="links">
                 <Link to="/">Početna</Link>
+                <Link to="/Zaglavlje">Zaglavlje</Link>
             </div>
         </nav>
     );

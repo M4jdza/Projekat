@@ -1,5 +1,4 @@
 
-
 export default function Forma({ handleAddFormChange, handleEventSubmit }) {
 
     return (
