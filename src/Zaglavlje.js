@@ -1,17 +1,13 @@
-import React/*, { useState } */ from 'react'
+import React from 'react'
 import { useNavigate } from 'react-router-dom';
 
 export default function Zaglavlje(props) {
 
-    //const [zaglavlje, setZaglavlje] = useState('');
 
     let naslov = "";
 
     const postaviZaglavlje = (e) => {
         naslov = e.target.value;
-        //let ime = e.target.value;
-        //setZaglavlje(ime);
-        console.log(naslov);
     }
 
 
@@ -23,7 +19,6 @@ export default function Zaglavlje(props) {
         navigate("/", { state: { naslov: naslov } });
     }
 
-
     return (
         <>
             <form onSubmit={Potvrda}>
@@ -34,7 +29,6 @@ export default function Zaglavlje(props) {
                 <br />
                 <input type="submit" value="Potvrdi" />
             </form>
-
         </>
     )
 }
